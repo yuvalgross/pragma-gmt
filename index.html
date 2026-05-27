@@ -374,18 +374,39 @@ footer {
 :focus-visible {
     outline-color: var(--accent);
   }
-::-webkit-scrollbar {
+/* Light mode scrollbar */
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar {
     width: 8px;
   }
-::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background: var(--paper-warm);
   }
-::-webkit-scrollbar-thumb {
-    background: var(--border); border-radius: 4px;
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink-muted);
+    border-radius: 4px;
   }
-::-webkit-scrollbar-thumb:hover {
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ink);
+  }
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--paper-warm);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
     background: var(--accent);
   }
+}
 h1 em {
     color: var(--gold);
   }
@@ -4181,7 +4202,7 @@ to {
         <!-- Attribution layer -->
         <path d="M487 136 L487 158" stroke="#d97706" stroke-width="1" stroke-dasharray="3 2"/>
         <rect x="385" y="158" width="205" height="20" rx="6" fill="rgba(217,119,6,0.07)" stroke="rgba(217,119,6,0.18)" stroke-width="1"/>
-        <text x="487" y="172" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">↑ HockeyStack · GA4 · Google Tag Manager — attribution layer</text>
+        <text x="487" y="172" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">↑ HockeyStack · GA4 · GTM — attribution</text>
 
         <!-- Tooltip -->
         <g class="arch-tooltip" id="archTooltip" opacity="0" pointer-events="none">
