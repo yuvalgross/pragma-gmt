@@ -706,9 +706,20 @@ nav {
     letter-spacing: var(--ls-caps);
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
     flex-wrap: wrap;
     line-height: 1.6;
+  }
+.hero-eyebrow-meta {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding-left: 32px;
   }
 .hero-eyebrow::before {
     content: '';
@@ -1431,6 +1442,19 @@ footer {
     gap: 2rem;
     list-style: none;
   }
+.footer-meta {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    opacity: 0.7;
+  }
 .footer-links a {
     font-family: var(--font-body);
     font-size: 0.875rem;
@@ -2063,14 +2087,27 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-left: 14px;
+    position: relative;
+  }
+.exp-skill::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.6;
   }
 .exp-skill-name {
-    font-size: 0.82rem;
+    font-size: 0.88rem;
     color: var(--ink);
     font-weight: var(--fw-regular);
     min-width: 0;
     flex: 1;
-    opacity: 0.88;
+    opacity: 0.92;
   }
 .exp-bar {
     flex: 1;
@@ -3709,6 +3746,7 @@ to {
       <li><a href="#how">The system</a></li>
       <li><a href="#results">Results</a></li>
       <li><a href="#stack">CV</a></li>
+      <li><a href="#engagement">Work</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Switch to dark mode">
@@ -3732,6 +3770,7 @@ to {
   <a href="#how" onclick="closeMenu()">The system</a>
   <a href="#results" onclick="closeMenu()">Results</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
+  <a href="#engagement" onclick="closeMenu()">Work</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
 </div>
 
@@ -3872,7 +3911,8 @@ to {
 
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow"><em class="eyebrow-story">Sold it first. Then automated it.</em> &nbsp;·&nbsp; GTM Engineer · Revenue Systems Architect · Berlin / Remote</div>
+      <div class="hero-eyebrow"><em class="eyebrow-story">Sold it first. Then automated it.</em></div>
+      <div class="hero-eyebrow-meta">GTM Engineer · Revenue Systems Architect · Berlin / Remote</div>
       <h1><em>Where field sales</em><br>meets engineering.</h1>
       <p class="hero-sub">8 years closing enterprise B2B deals. Now I build the automated revenue systems I always wished I had. Clay, HubSpot, n8n, Make.com — signal-based, A/B tested, built to compound.</p>
       <div class="hero-actions">
@@ -4392,14 +4432,13 @@ to {
       <div class="exp-card">
         <div class="exp-card-header">
           <div class="exp-cat">Build — GTM Engineering</div>
-          <div class="exp-level expert">Expert</div>
         </div>
         <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">Signal-based pipeline architecture</span><div class="exp-bar"><div class="exp-fill" style="--w:80%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Clay · n8n · Make.com · Zapier</span><div class="exp-bar"><div class="exp-fill" style="--w:80%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">AI-powered outreach at scale</span><div class="exp-bar"><div class="exp-fill" style="--w:70%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Python · Claude Code · API integrations</span><div class="exp-bar"><div class="exp-fill" style="--w:70%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">ICP scoring · enrichment waterfalls</span><div class="exp-bar"><div class="exp-fill" style="--w:90%"></div></div></div>
+          <div class="exp-skill"><span class="exp-skill-name">Signal-based pipeline architecture</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Clay · n8n · Make.com · Zapier</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">AI-powered outreach at scale</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Python · Claude Code · API integrations</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">ICP scoring · enrichment waterfalls</span></div>
         </div>
         <div class="exp-tags">
           <span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">Make.com</span><span class="exp-tag">Claude Code</span><span class="exp-tag">Apollo</span>
@@ -4410,14 +4449,13 @@ to {
       <div class="exp-card">
         <div class="exp-card-header">
           <div class="exp-cat">Run — CRM, RevOps & Analytics</div>
-          <div class="exp-level advanced">Advanced</div>
         </div>
         <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">HubSpot — full architecture & automation</span><div class="exp-bar"><div class="exp-fill" style="--w:97%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · hygiene</span><div class="exp-bar"><div class="exp-fill" style="--w:92%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Revenue attribution · HockeyStack · GA4</span><div class="exp-bar"><div class="exp-fill" style="--w:87%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">A/B testing · pipeline velocity · CAC</span><div class="exp-bar"><div class="exp-fill" style="--w:90%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Salesforce · Pipedrive · Attio</span><div class="exp-bar"><div class="exp-fill" style="--w:84%"></div></div></div>
+          <div class="exp-skill"><span class="exp-skill-name">HubSpot — full architecture & automation</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · hygiene</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Revenue attribution · HockeyStack · GA4</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">A/B testing · pipeline velocity · CAC</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Salesforce · Pipedrive · Attio</span></div>
         </div>
         <div class="exp-tags">
           <span class="exp-tag">HubSpot</span><span class="exp-tag">Salesforce</span><span class="exp-tag">HockeyStack</span><span class="exp-tag">GA4</span>
@@ -4428,14 +4466,13 @@ to {
       <div class="exp-card">
         <div class="exp-card-header">
           <div class="exp-cat">Sell — Field Sales & Enablement</div>
-          <div class="exp-level expert">Expert</div>
         </div>
         <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">Full-cycle enterprise B2B sales</span><div class="exp-bar"><div class="exp-fill" style="--w:90%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">SPICED · discovery · complex deal cycles</span><div class="exp-bar"><div class="exp-fill" style="--w:90%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Sales playbook & battlecard design</span><div class="exp-bar"><div class="exp-fill" style="--w:90%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Multi-stakeholder · champion navigation</span><div class="exp-bar"><div class="exp-fill" style="--w:100%"></div></div></div>
-          <div class="exp-skill"><span class="exp-skill-name">Sales enablement · coaching (Seismic)</span><div class="exp-bar"><div class="exp-fill" style="--w:80%"></div></div></div>
+          <div class="exp-skill"><span class="exp-skill-name">Full-cycle enterprise B2B sales</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">SPICED · discovery · complex deal cycles</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Sales playbook & battlecard design</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Multi-stakeholder · champion navigation</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Sales enablement · coaching (Seismic)</span></div>
         </div>
         <div class="exp-tags">
           <span class="exp-tag">SPICED</span><span class="exp-tag">Seismic</span><span class="exp-tag">Enterprise</span><span class="exp-tag">B2B</span>
@@ -4668,7 +4705,8 @@ to {
 <!-- CV SECTION -->
 <section id="stack">
   <div class="container">
-    <div class="section-label" style="margin-bottom:1.5rem">Curriculum Vitae</div>
+    <div class="section-label" style="margin-bottom:1.5rem">CV</div>
+    <h2 style="margin-bottom:2rem">The <em>track record.</em></h2>
     <div class="cv-solo-layout">
       <div class="cv-sidebar">
         <div class="cv-sidebar-label">Curriculum Vitae</div>
@@ -4746,6 +4784,46 @@ to {
 </section>
 
 
+<!-- ENGAGEMENT -->
+<section class="philosophy-section" id="engagement">
+  <div class="container">
+    <div class="section-label">Engagement</div>
+    <h2>How we'd<br><em>work together.</em></h2>
+    <p class="phil-intro">Three ways to bring me in. Pick the one that fits your stage and your team.</p>
+
+    <div class="philosophy-grid">
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">Audit & blueprint</div>
+        <p class="phil-desc">I map your current stack, your funnel, and your data. You get a written diagnostic, a prioritised fix list, and a build plan you can execute with or without me.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">2–4 wks</span>
+          <span class="phil-stat-label">For teams who suspect their stack is bloated</span>
+        </div>
+      </div>
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">Build & ship</div>
+        <p class="phil-desc">Hands-on implementation. Signal ingestion, Clay workflows, HubSpot architecture, AI-personalised sequences. You watch it get built, learn how it works, and own it after handover.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">4–12 wks</span>
+          <span class="phil-stat-label">For teams who need someone to actually build it</span>
+        </div>
+      </div>
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">Embedded / in-house</div>
+        <p class="phil-desc">Joining your team as GTM Engineer, RevOps Lead, or fractional equivalent. I run your revenue systems alongside the people who close the deals.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">Full-time</span>
+          <span class="phil-stat-label">Or fractional. For companies past Series A</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="container">
@@ -4813,8 +4891,10 @@ to {
     <li><a href="#how">The system</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#stack">CV</a></li>
+    <li><a href="#engagement">Work</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
   </ul>
+  <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated May 2026</div>
 </footer>
 
 <script>
@@ -4861,8 +4941,9 @@ to {
     document.querySelectorAll('.reveal-text').forEach(el => obs.observe(el));
   })();
 
-  /* 4. TYPEWRITER ROLE CYCLING — desktop only (length changes cause layout shifts on mobile) */
+  /* 4. TYPEWRITER ROLE CYCLING — disabled in v3 (redundant with static role meta line) */
   (function() {
+    return;
     if (window.matchMedia('(max-width: 768px)').matches) return;
     const roles = [
       'B2B SaaS Account Executive',
